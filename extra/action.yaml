@@ -15,6 +15,11 @@ runs:
       uses: actions/download-artifact@v3       
       with:
         name: greetings-jar
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        java-version: '17'
+        distribution: 'temurin'
     - id: test-run
       env:	
         ARGS: ${{ inputs.arguments-to-print }}
