@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/xuezhongcai/greetings-ci/compare/v0.3.0...v0.4.0) (2024-02-06)
+
+
+### Features
+
+* add testing to pipeline ([52aceb0](https://github.com/xuezhongcai/greetings-ci/commit/52aceb09112d2a63081c4595e8f31d3b92f5f2de))
+
+
+
 # [0.3.0](https://github.com/xuezhongcai/greetings-ci/compare/v0.2.0...v0.3.0) (2024-02-06)
 
 
