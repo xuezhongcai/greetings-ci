@@ -9,19 +9,25 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "changelog" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "changelog" ]
 
 jobs:
   build:
 
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Conventional Changelog Action
+      uses: TriPSs/conventional-changelog-action@v5.1.0
+      with:
+        skip-git-pull: "true"
+    
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
