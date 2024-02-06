@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/xuezhongcai/greetings-ci/compare/v0.2.0...v0.3.0) (2024-02-06)
+
+
+### Features
+
+* version artifact ([cb4bf05](https://github.com/xuezhongcai/greetings-ci/commit/cb4bf05c62cf3e077347d5639013884e87d550aa))
+
+
+
 # [0.2.0](https://github.com/xuezhongcai/greetings-ci/compare/v0.1.0...v0.2.0) (2024-02-06)
 
 
