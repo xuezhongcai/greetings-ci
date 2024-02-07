@@ -9,15 +9,7 @@ name: Java CI with Gradle
 
 on:
   push:
-    branches: [ "main"]
-  pull_request:
-    branches: [ "main"]
-  workflow_dispatch:
-    inputs:
-      myVersion:
-        description: 'Input Version'
-      myValues:
-        description: 'Input Values'
+    branches: [ "test=deployment", "bule", "green"]
 
 jobs:
   build:
