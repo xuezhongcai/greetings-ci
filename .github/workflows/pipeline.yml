@@ -85,6 +85,18 @@ jobs:
         chmod +x ./test-script.sh
         ./test-script.sh ${{ github.event.inputs.myVersion || needs.build.outputs.artifact-tag }} ${{ github.event.inputs.myValues }}
 
+  create-issue-on-failure:
+
+    needs: test-run
+
+    permissions:
+      issues: write
+
+    if: always() && failure() 
+    uses: ./.github/workflows/create-failure-issue.yml 
+    with:
+      title: "Automated workflow failure issue for commit ${{ github.sha }}"
+      body: "This issue was automatically created by the GitHub Action workflow ** ${{ github.workflow }} **"  
 
     # NOTE: The Gradle Wrapper is the default and recommended way to run Gradle (https://docs.gradle.org/current/userguide/gradle_wrapper.html).
     # If your project does not have the Gradle Wrapper configured, you can use the following configuration to run Gradle with a specified version.
